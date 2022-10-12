@@ -124,7 +124,7 @@ export const getAdjacentPosts = async(createdAt, slug) => {
     ) {
       title
       featuredImage {
-        photo: url
+        url
       }
       createdAt
       slug
