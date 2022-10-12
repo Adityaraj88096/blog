@@ -30,7 +30,7 @@ class MyDocument extends Document {
                         }
                         gtag('js', new Date());
 
-                        gtag('config', 'G-YE682ERZGC');`
+                        gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`
                         }
                     </Script>
                 </Head>
