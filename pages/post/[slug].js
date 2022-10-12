@@ -1,6 +1,5 @@
 import React from 'react'
 import { getPosts, getPostDetails} from '../../services/index';
-
 import {PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader, Adsense} from '../../components'; 
 import { useRouter } from 'next/router';
 import AdjacentPosts from '../../sections/AdjacentPosts';
@@ -19,7 +18,7 @@ const PostDetails = ({ post }) => {
                 <PostDetail post={post}/>
                 <Author author={post.author} />
                 <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
-                <Adsense />
+                {/* <Adsense /> */}
                 <CommentsForm slug={post.slug} />
                 <Comments slug={post.slug} />
             </div>

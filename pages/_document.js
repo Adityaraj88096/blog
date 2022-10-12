@@ -20,11 +20,22 @@ class MyDocument extends Document {
                                 });
                                 `,
                     }} />
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE682ERZGC"></script>
+                    <script>
+                        {`window.dataLayer = window.dataLayer || [];
+                        function gtag(){
+                        dataLayer.push(arguments)
+                        }
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-YE682ERZGC');
+                    `}
+                    </script>
                 </Head>
-                
-                    <Main />
-                    <NextScript />
-                
+
+                <Main />
+                <NextScript />
+
             </Html>
         )
     }
