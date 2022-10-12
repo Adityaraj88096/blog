@@ -11,9 +11,9 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7225853903466495"
-                        crossorigin="anonymous"></Script>
-                    <Script dangerouslySetInnerHTML={{
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7225853903466495"
+                        crossorigin="anonymous"></script>
+                    <script dangerouslySetInnerHTML={{
                         __html: `
                             (adsbygoogle = window.adsbygoogle || []).push({
                                 google_ad_client: "ca-pub-7225853903466495",
@@ -21,23 +21,26 @@ class MyDocument extends Document {
                                 });
                                 `,
                     }} />
-                    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YE682ERZGC"></Script>
-                    <Script>
-                        {`
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE682ERZGC" />
+                    <script dangerouslySetInnerHTML={{
+                        __html: `
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){
                         window.dataLayer.push(arguments);
                         }
                         gtag('js', new Date());
 
-                        gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`
-                        }
-                    </Script>
+                        gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+                        `
+                    }
+                    }
+                    />
                 </Head>
+                <body>
 
-                <Main />
-                <NextScript />
-
+                    <Main />
+                    <NextScript />
+                </body>
             </Html>
         )
     }
