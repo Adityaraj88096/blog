@@ -2,13 +2,13 @@ import React from 'react'
 import { getCategories, getCategoryPosts } from '../../services';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { Categories, PostCard, PostWidget } from '../../components';
+import { Categories, PostCard, PostWidget, Loader } from '../../components';
 
 const CategoryPosts = ({ posts }) => {
     const router = useRouter();
     
     if (router.isFallback) {
-      return <Loader />;
+      return (<Loader />);
     }
   return (
     <div className="container mx-auto px-10 mb-8 ">
