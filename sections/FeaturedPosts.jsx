@@ -23,6 +23,7 @@ const responsive = {
   //   items: 1,
   // },
 };
+
 const customLeftArrow = () => {
   return (
     <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
@@ -42,7 +43,6 @@ const customRightArrow = () => {
     </div>
   );
 }
-
 const FeaturedPosts = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -56,7 +56,7 @@ const FeaturedPosts = () => {
 
   return (
     <div className="mb-8">
-      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
+      <Carousel infinite arrows responsive={responsive} itemClass="px-4">
         {dataLoaded && featuredPosts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
         ))}
@@ -64,5 +64,5 @@ const FeaturedPosts = () => {
     </div>
   );
 };
-
+// 
 export default FeaturedPosts;
